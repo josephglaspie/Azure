@@ -1,4 +1,4 @@
-﻿$unUsedDisks = Import-Csv '/Users/jxg2980/Downloads/disks_6-5.csv'   
+﻿$unUsedDisks = Import-Csv '/Users/user/Downloads/disks_6-5.csv'   
 $interlineSubs = Get-AzureRmSubscription | where-object {$_.Name -like "*interline*"} 
 
 ForEach($interlineSub in $interlineSubs){
