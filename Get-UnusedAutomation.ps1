@@ -72,7 +72,7 @@ $Username = Get-AutomationVariable -Name sendgridname
 $Password = ConvertTo-SecureString $sendgridpw -AsPlainText -Force
 $credential = New-Object System.Management.Automation.PSCredential $Username, $Password
 $SMTPServer = "smtp.sendgrid.net"
-$EmailFrom = "AzureAdmin-noreply@homedepot.com"
+$EmailFrom = "AzureAdmin-noreply@email.com"
 [string[]]$EmailTo = "Email1@email.com","email2@email.com"  #"AddToEmailAddressessHere. To add multiple use comma separated values."
 $Subject = "UnusedResources $filedate"
 
