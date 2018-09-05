@@ -14,13 +14,12 @@ try
         -TenantId $servicePrincipalConnection.TenantId `
         -ApplicationId $servicePrincipalConnection.ApplicationId `
         -CertificateThumbprint $servicePrincipalConnection.CertificateThumbprint 
-}
-catch {
+}catch{
     if (!$servicePrincipalConnection)
     {
         $ErrorMessage = "Connection $connectionName not found."
         throw $ErrorMessage
-    } else{
+    }else{
         Write-Error -Message $_.Exception
         throw $_.Exception
     }
